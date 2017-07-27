@@ -16,3 +16,39 @@
 6) a.media_type
 
 7) a.album
+
+
+part 4
+----------------------------------------------------------------------------------
+1)
+  Class Artist
+  has_many :tracks, through: :albums
+  has_many :albums
+
+  Class album
+
+  has_many :tracks
+
+2) Class track
+   belongs_to: genre
+
+   Class playlists
+   has_many :genres, through: :tracks
+   has_and_belongs_to_many :tracks
+
+3) class album
+   has_many :playlists, through: :tracks
+   has_many :tracks
+
+   Class tracks
+   has_and_belongs_to_many :playlists
+
+4) class Playlist
+   has_many :media_types, through: :tracks
+   has_and_belongs_to_many :tracks
+
+   Class Track
+   belongs_to :media_type
+
+5) ?
+6) ?
