@@ -1,0 +1,18 @@
+1) a = Album.find_by(title: 'Vinicius De Moraes')
+   a.tracks.all
+
+2) a = Artist.find_by(name: 'Philip Glass Ensemble')
+   a.albums.all
+
+3) a = Playlist.find_by(name: 'Brazilian Music')
+   a.tracks.all
+
+4) a = Genre.find_by(name: "Jazz")
+   a.tracks.all
+
+5) a = Track.find_by(name:'My Time After Awhile')
+   a.genre
+
+6) a.media_type
+
+7) a.album
